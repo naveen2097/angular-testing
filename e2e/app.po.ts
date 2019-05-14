@@ -1,11 +1,24 @@
 import { browser, by, element } from 'protractor';
 
 export class AppPage {
+ 
   navigateTo() {
-    return browser.get('/');
+    return browser.get('/users');
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('h1')).getText();
+  }
+
+  getFirstUser() {
+    return element(by.css('.user-button'));
+  }
+
+  getInputField() {
+    return element(by.css('input'));
+  }
+
+  clickSubmitButton() {
+    return element(by.css('button')).click();
   }
 }
